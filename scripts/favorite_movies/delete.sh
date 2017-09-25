@@ -1,1 +1,10 @@
-curl --include --request DELETE "http://localhost:4741/favorite_movies/${ID}"
+#!/bin/bash
+
+API="${API_ORIGIN:-http://localhost:4741}"
+URL_PATH="/favorite_movies/${ID}"
+curl "${API}${URL_PATH}" \
+  --include \
+  --request DELETE \
+  --header "Authorization: Token token=$TOKEN"
+
+echo

@@ -9,8 +9,8 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "favorite_movie": {
-      "title": "'"${TITLE}"'"
-      "genre": "'"${GENRE}"'"
+      "title": "'"${TITLE}"'",
+      "genre": "'"${GENRE}"'",
       "comment": "'"${COMMENT}"'"
     }
   }'
