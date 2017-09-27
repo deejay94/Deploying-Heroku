@@ -47,7 +47,7 @@ class FavoriteMoviesController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
   def favorite_movie_params
-    params.require(:favorite_movie).permit(:title, :genre, :comment)
+    params.require(:favorite_movie).permit(:id, :title, :genre, :comment)
   end
 
   private :set_favorite_movie, :favorite_movie_params
