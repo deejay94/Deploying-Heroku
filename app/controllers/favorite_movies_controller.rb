@@ -1,9 +1,9 @@
-class FavoriteMoviesController < OpenReadController
+class FavoriteMoviesController < ProtectedController
   before_action :set_favorite_movie, only: %i[update destroy]
 
   # GET /favorite_movies
   def index
-    @favorite_movies = FavoriteMovie.all
+    @favorite_movies = current_user.favorite_movies.all
 
     render json: @favorite_movies
   end
