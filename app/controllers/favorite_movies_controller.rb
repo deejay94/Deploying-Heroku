@@ -3,7 +3,7 @@ class FavoriteMoviesController < ProtectedController
 
   # GET /favorite_movies
   def index
-    @favorite_movies = current_user.favorite_movies.all
+    @favorite_movies = current_user.favorite_movies
 
     render json: @favorite_movies
   end
