@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="${API_ORIGIN:-http://https://deejay94.herokuapp.com}"
+API="${API_ORIGIN:-https://deejay94.herokuapp.com}"
 URL_PATH="/favorite_movies"
 curl "${API}${URL_PATH}" \
   --include \
